@@ -1,0 +1,42 @@
+.story-card {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 20px;
+  margin: 15px auto; /* Center the card */
+  max-width: 90%; /* Make it responsive */
+  width: 100%; /* Ensure it takes full width */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-card:hover {
+  transform: scale(1.05);
+}
+
+.story-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.story-content {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.moral {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4081;
+  margin-top: 15px;
+}
