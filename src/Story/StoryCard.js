@@ -1,10 +1,14 @@
 import React from 'react'
 import "./StoryCard.css";
 import axios from 'axios'
+import { useState } from 'react'
+
 
 
 
 export default function StoryCard({ title, author, story, moral }) {
+    const [audioUrl, setAudioUrl] = useState('hj')
+
 
     const handleClick = async () => {
         const storyData = { title, author, story, moral }
@@ -27,7 +31,17 @@ export default function StoryCard({ title, author, story, moral }) {
             <p className="author">By: {author}</p>
             <p className="story-content">{story}</p>
             <p className="moral">Moral: {moral}</p>
+            {/* {audioUrl == '' ? <button onClick={handleClick}>Click Here </button> :
+                <audio controls src='/audio_1740939042751.mp3'>
+                    <source src={audio} type="audio/mpeg" />
+                </audio>
+            } */}
 
+
+            <audio controls>
+                <source src="/temp.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+            </audio>
 
             <button onClick={handleClick}>Click Here </button>
         </div>
